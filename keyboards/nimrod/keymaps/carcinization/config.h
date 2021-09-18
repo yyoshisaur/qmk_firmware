@@ -1,4 +1,4 @@
-/* Copyright 2020 cjcodell1
+/* Copyright 2020 cjcoell1
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,3 +19,10 @@
 #    define COMBO_COUNT 5
 #    define COMBO_TERM 150
 #endif
+
+#define PERMISSIVE_HOLD
+
+#define RGB_DI_PIN D3
+#define RGBLED_NUM 13
+
+#define RGBLIGHT_ANIMATIONS
