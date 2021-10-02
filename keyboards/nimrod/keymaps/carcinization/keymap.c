@@ -49,26 +49,35 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_ZMINS] = ACTION_TAP_DANCE_DOUBLE(KC_Z, KC_MINS),
 };
 
-#define KC_CA LCTL_T(KC_A)
-#define KC_AS LALT_T(KC_R)
-#define KC_GD LGUI_T(KC_S)
-#define KC_SF LSFT_T(KC_T)
-#define KC_SJ RSFT_T(KC_N)
-#define KC_GK RGUI_T(KC_E)
-#define KC_AL RALT_T(KC_I)
-#define KC_CENT RCTL_T(KC_O)
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTL_T(KC_Z):
+            return TAPPING_TERM + 250;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
+bool get_retro_tapping(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case LCTL_T(KC_Z):
+            return true;
+        default:
+            return false;
+    }
+}
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_space(
   TD(TD_QESC),  TD(TD_WTAB), KC_F, KC_P,  KC_G, TD(TD_QUOTJ),  KC_L,   KC_U,  TD(TD_YSCLN), KC_BSPC,
-  KC_CA, KC_AS, KC_GD, KC_SF, KC_D, KC_H, KC_SJ, KC_GK,   KC_AL,  KC_CENT,
-  KC_Z,  KC_X,  KC_C,  KC_V,  KC_B, KC_K, KC_M,  KC_COMM, KC_DOT, KC_ENT,
+  KC_A, KC_R, KC_S, KC_T, KC_D, KC_H, KC_N, KC_E,   KC_I,  KC_O,
+  LCTL_T(KC_Z),  KC_X,  KC_C,  KC_V,  KC_B, KC_K, KC_M,  KC_COMM, KC_DOT, KC_ENT,
              LT(_NUM_SYM, KC_SPC),               KC_LSFT
   ),
 
   [_NUM_SYM] = LAYOUT_split_space(
   KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,     KC_0,
- KC_LEFT,  KC_DOWN, KC_UP, KC_RIGHT, MO(_RGB),  KC_EQUAL, KC_LEFT, KC_UP,   KC_DOWN, KC_RIGHT,
+ KC_LEFT,  OSM(MOD_LCTL), OSM(MOD_LALT), OSM(MOD_LGUI), MO(_RGB),  KC_EQUAL, KC_LEFT, KC_UP,   KC_DOWN, KC_RIGHT,
   KC_MINS, KC_LBRC, KC_RBRC, KC_BSLASH, KC_GRAVE, C(KC_PSCREEN), KC_DEL, KC_SCLN, KC_COLN, KC_SLSH,
                     KC_TRNS,                                     KC_TRNS
   ),

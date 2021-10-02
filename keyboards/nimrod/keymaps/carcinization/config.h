@@ -20,7 +20,9 @@
 #    define COMBO_TERM 150
 #endif
 
+#define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD
+#define RETRO_TAPPING_PER_KEY
 
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 13
