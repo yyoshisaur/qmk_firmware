@@ -1,4 +1,6 @@
-/* Copyright 2017 Paul James (paul@peej.co.uk)
+/* Mouse jiggler stuff pulled from https://github.com/DIYCharles/MouseJiggler
+
+ Copyright 2017 Paul James (paul@peej.co.uk)
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
