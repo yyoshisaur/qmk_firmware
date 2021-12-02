@@ -7,7 +7,7 @@ NKRO_ENABLE        = yes
 OLED_DRIVER_ENABLE = no
 MOUSEKEY_ENABLE     = no     # Mouse keys
 RGBLIGHT_ENABLE     = no   # Enable WS2812 RGB underlight.
-VIA_ENABLE          = yes         # Enable VIA
+# VIA_ENABLE          = yes         # Enable VIA
 OLED_ENABLE = no
-LTO_ENABLE          = yes
+# LTO_ENABLE          = yes
 

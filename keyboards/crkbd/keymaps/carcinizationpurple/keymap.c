@@ -33,6 +33,8 @@ enum custom_keycodes {
   LOWER,
   RAISE,
   ADJUST,
+  RGBRST,
+  KC_RACL // right alt / colon
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
