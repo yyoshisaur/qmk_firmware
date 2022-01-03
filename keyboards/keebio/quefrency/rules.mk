@@ -2,7 +2,7 @@
 MCU = atmega32u4
 
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
-MOUSEKEY_ENABLE = no        # Mouse keys
+MOUSEKEY_ENABLE = yes        # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
 COMMAND_ENABLE = no         # Commands for debug and configuration
@@ -15,5 +15,5 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 
 SPLIT_KEYBOARD = yes
 
-DEFAULT_FOLDER = keebio/quefrency/rev1
+DEFAULT_FOLDER = keebio/quefrency/rev2
 LTO_ENABLE = yes
