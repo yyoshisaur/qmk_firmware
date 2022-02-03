@@ -37,9 +37,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(KC_BRIU);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_BRID);
         }
     } else if (index == 1) {
         if (clockwise) {

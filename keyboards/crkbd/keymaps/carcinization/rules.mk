@@ -1,7 +1,8 @@
-BOOTLOADER = atmel-dfu
+# BOOTLOADER = atmel-dfu
 RGBLIGHT_ENABLE    = no
 RGB_MATRIX_ENABLE  = yes
 MOUSEKEY_ENABLE    = no
 NKRO_ENABLE        = yes
-OLED_DRIVER_ENABLE = yes
+OLED_DRIVER_ENABLE = no
+
 

@@ -18,7 +18,7 @@ extern uint8_t is_master;
 // Layer names don't all need to be of the same length, obviously, and you can also skip them
 // entirely and just use numbers.
 enum layers {
-  _QWERTY,
+  _BASE,
   _LOWER,
   _RAISE,
   _ADJUST
@@ -29,7 +29,7 @@ enum layers {
 #define KC_LGESC LGUI_T(KC_ESC)
 
 enum custom_keycodes {
-  QWERTY = SAFE_RANGE,
+  BASE = SAFE_RANGE,
   LOWER,
   RAISE,
   ADJUST,
@@ -38,7 +38,7 @@ enum custom_keycodes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_QWERTY] = LAYOUT(
+  [_BASE] = LAYOUT(
   //,-----------------------------------------.                ,---------------------------------------------.
      KC_ESC,  KC_Q,  KC_W,  KC_F,  KC_P,  KC_G,                   KC_J,  KC_L,  KC_U,  KC_Y,  KC_SCLN, KC_BSPC,
   //|------+------+------+------+------+------|                |------+------+-------+------+-------+--------|
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|------+------+------+------+------+------|                |------+------+-------+------+-------+--------|
     LCTL_T(KC_MINS),  KC_Z,  KC_X,  KC_C,  KC_V,  KC_B,      KC_K,  KC_M,KC_COMM,KC_DOT,KC_SLSH,KC_ENT,
   //|------+------+------+------+------+------+------|  |------+------+------+-------+------+-------+--------|
-                               KC_LALT, KC_LGUI, LT(_LOWER, KC_SPC),   KC_LSFT, RAISE, KC_DEL
+                               LALT_T(KC_LCTL), KC_LGUI, LT(_LOWER, KC_SPC),   KC_LSFT, RAISE, KC_DEL
                               //`--------------------'  `--------------------'
   ),
 
